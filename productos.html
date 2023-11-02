@@ -34,7 +34,29 @@
         <a class="navegacion__enlace" href="nosotros.html">NOSOTROS</a>
     </nav>
     <main class="contenedor">
-        <h1>Nuestros Productos</h1>
+        <h1>React Js</h1>
+        <div class="camisa">
+            <img class="camisa__imagen" src="img/3.jpg" alt="logotipo camisa imagen">
+            <div class="camisa__contenido">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit quaerat quisquam nihil
+                    doloremque quibusdam, tenetur sed sint provident? Fugiat pariatur, quo quos libero id repellendus
+                    quibusdam sapiente vitae velit incidunt!</p>
+                <form class="formulario">
+                    <select class="formulario__campo">
+                        <!-- Con este option disable selected no nos deja seleccionar -- Seleccionar Talla -- al momento
+                        de seleccionar las opciones. -->
+                        <option disabled selected>-- Seleccionar Talla --</option>
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+                    <!-- Esta línea es para elegir la cantidad de camisas; pero con un mínimo; porqué de lo contrario 
+                    se tendrían números negativos. -->
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+                    <input class="formulario__submit" type="submit" value="Agregar al Carrito">
+                </form>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <p class="footer__texto">Front End Store - Todos los Derechos Reservados 2023. &copy; By Héctor Gustavo Vallejo

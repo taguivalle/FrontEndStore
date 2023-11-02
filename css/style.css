@@ -55,7 +55,7 @@ a {
 
 /* Ahora en este global le estaríamos dando estilos a las imagenes. */
 img {
-    max-width: 100%;
+    width: 100%;
 }
 
 /* En este otro global, al contenedor le daremos también sus estilos. */
@@ -157,11 +157,6 @@ navegacion__enlace--activo,
     padding: 1rem;
 }
 
-.producto__imagen {
-    /* Con este width podemos hacer responsive el sitio web. */
-    width: 100%;
-}
-
 /* Desde bloque vamos a darle estilos al producto nombre y al precio*/
 .producto__nombre {
     font-size: 4rem;
@@ -226,8 +221,6 @@ scroll hacia los lados. */
 .nosotros__imagen {
     /* Con esta línea subimos la imagen encima del texto cuando se hace un responsive. */
     grid-row: 1 / 2;
-    /* Para alinear la imagen al ciento por ciento. */
-    width: 100%;
 }
 
 /* Ahora vamos a necesitar un mq para posicionar la imagen de la columna dos hacia la tres; al lado derecho del 
@@ -251,14 +244,61 @@ texto. */
     }
 }
 
-.bloque__imagen {
-    width: 100%;
-}
-
 .bloque {
     text-align: center;
 }
 
 .bloque__titulo {
     margin: 0;
+}
+
+/* En este bloque se encuentran los estilos de la página del producto camisa. */
+@media (min-width: 768px) {
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Para separar la imagen del texto se hace con el column gap.*/
+        column-gap: 2rem;
+    }
+}
+
+/* Este es el estilo para formulario. */
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Estos son los estilos del input. */
+.formulario__campo {
+    /* Ancho del border, tipo de border y color primario del border. */
+    border: 1rem solid var(--primarioOscuro);
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Para que se vea más grande el input. */
+    padding: 1rem;
+    appearance: none;
+}
+
+/* Estos son los estilos del submit. */
+.formulario__submit {
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    /* Esta el fuente de google font. */
+    font-family: var(--fuente-principal);
+    padding: 2rem;
+    /* Con la siguiente línea nos permite hacer una TRANSICIÓN desde el var secundario hasta el secundario oscuro; 
+    Pero, con el background color original y ademas, con un tiempo prudencial para que aparezca el degradado. */
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
+}
+
+/* Aquí le damos el estilo para que aparezca la manito como un pointer. */
+.formulario__submit:hover {
+    cursor: pointer;
+    /* En esta siguiente línea se le hace un degradado oscuro al momento de pasar el puntero o el mouse. */
+    background-color: var(--secundarioOscuro);
 }
