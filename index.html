@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title>
+    <!-- Con este link se inserta el icono en el título de la pagina "FrontEnd Store". -->
+    <link rel="shortcut icon" href="icons/frontEnd.ico" type="image/x-icon">
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub&family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Con esta etiqueta link se puede enlazar con el archivo style.css -->
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Esta etiqueta header viene a ser otro bloque. -->
+    <header class="header">
+        <!-- Cuando se tienen varias páginas es muy conveniente que, sí se visita cualquiera de ellas el logotipo
+        siempre debe de llevarnos a la página principal o sea al index.tml. Por lo que es muy importante utilizar
+        la etiqueta <a href="index.html".-->
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="logotipo">
+        </a>
+    </header>
+    <!-- Esta etiqueta nav viene a ser otro bloque. -->
+    <nav class="navegacion">
+        <!-- Este primer elemento es un claro ejemplo de un modificador. -->
+        <a class="navegacion__enlace" href="index.html">TIENDA</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="nosotros.html">NOSOTROS</a>
+    </nav>
+    <main class="contenedor">
+        <h1>Nuestros Productos</h1>
+        <!-- Este es un bloque para los productos. -->
+        <div class="grid">
+            <!-- Y este es un bloque para el producto VueJs pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/1.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">VueJS</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto VueJS. -->
+            <!-- Y este es un bloque para el producto ángular pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/2.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">AngularJs</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto AngularJs. -->
+            <!-- Y este es un bloque para el producto ReactJs pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/3.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">ReactJs</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto ReactJs. -->
+            <!-- Y este es un bloque para el producto Redux pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/4.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Redux</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto Redux. -->
+            <!-- Y este es un bloque para el producto Node.Js pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/5.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Node.Js</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto Node.Js. -->
+            <!-- Y este es un bloque para el producto SASS pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/6.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">SASS</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto SASS. -->
+            <!-- Y este es un bloque para el producto HTML5 pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/7.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">HTML5</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto HTML5. -->
+            <!-- Y este es un bloque para el producto GITHUB pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/8.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">GITHUB</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto GITHUB. -->
+            <!-- Y este es un bloque para el producto BulmaCSS pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/9.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">BulmaCSS</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto BulmaCSS. -->
+            <!-- Y este es un bloque para el producto TypeScript pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/10.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">TypeScript</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto TypeScript. -->
+            <!-- Y este es un bloque para el producto Drupal pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/11.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Drupal</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto Drupal. -->
+            <!-- Y este es un bloque para el producto JavaScript pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/12.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">JavaScript</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto JavaScript. -->
+            <!-- Y este es un bloque para el producto GraphQl pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/13.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">GraphQl</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto GraphQl. -->
+            <!-- Y este es un bloque para el producto WordPress pero significativo. O sea que no depende de nada más. -->
+            <div class="producto">
+                <a href="productos.html">
+                    <img class="producto__imagen" src="img/14.jpg" alt="imagen camisa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">WordPress</p>
+                        <p class="producto__precio">$25</p>
+                    </div>
+                </a>
+            </div><!-- Este es el fin de la clase producto WordPress. -->
+            <!-- Aquí iniciamos los gráficos con las camisas. por lo tanto tenemos un bloque con un moficador. -->
+            <div class="grafico grafico--camisas"></div>
+            <div class="grafico grafico--node"></div>
+
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - Todos los Derechos Reservados 2023. &copy; By Héctor Gustavo Vallejo
+            Espinosa.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+/* Root se le conoce como pseudo elementos; es decir los elementos que no existen en el código HTML. */
+:root {
+    /* Root es una forma de almacenar variables de CSS que se les conoce como custom properties. Se crea una paleta
+    de colores y se finaliza con dos puntos y posteriormente el color. Al siguiente bloque :root se le conoce como 
+    la variables de CSS. */
+    --primario: #9c27b0;
+    --primarioOscuro: #89119d;
+    --secundario: #ffce00;
+    --secundarioOscuro: rgb(233, 187, 2);
+    --blanco: #ffffff;
+    --negro: #000;
+    --fuente-principal: 'startliches', cusrive;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change estraído 
+de https://www.paulirish.com/2012/box-sizing-border-box-ftw/. NO debe de faltar en ningún proyecto. 
+apply a natural box layout model to all elements, but allowing components to change.*/
+html {
+    /* Hack para box model. */
+    box-sizing: border-box;
+    /* Recordemos que, esta siguiente línea es parte de lo que nos permite agregar que un rem sea =a 10px. */
+    font-size: 62.5%;
+
+}
+
+/* Con el asterisco selecciona todos los elementos del HTML, es como un selector universal */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Desde aquí comienzan los estilos globales. */
+body {
+    /* Con esta línea le damos el color morado de forma automática.*/
+    background-color: var(--primario);
+    /* 1 rem Es = a 10px*/
+    font-size: 1.6rem;
+    /* Con la siguiente línea le damos un interlineado a todo el proyecto. */
+    line-height: 1.5;
+}
+
+/* En este global vamos a seleccionar todos los párrafos para que se vean iguales. */
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+/* Ahora en este global estaríamos utilizando el enfoque de BEM, esto lo veremos en detalle más adelante. */
+a {
+    /* Con esta línea le quitamos el interlineado a todos los enlaces. */
+    text-decoration: none;
+}
+
+/* Ahora en este global le estaríamos dando estilos a las imagenes. */
+img {
+    max-width: 100%;
+}
+
+/* En este otro global, al contenedor le daremos también sus estilos. */
+.contenedor {
+    max-width: 120rem;
+    /* Aquí estamos centrando el contenido */
+    margin: 0 auto;
+}
+
+/* En este bloque vamos realizarlo los estilos globales a los heading. */
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuente-principal);
+}
+
+/* Ahora vamos a definir el peso de los heading de forma global. */
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/* En este bloque vamos a crearle los estilos al header. */
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+/* Aquí le damos estilos al logo del header. */
+.header__logo {
+    /* Este tiene una margen arriba y abajo como a la derecha e izquierda. */
+    margin: 3rem 0;
+}
+
+/* Aquí vamos crear los estilos del footer. */
+.footer {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__texto {
+    text-align: center;
+    font-family: var(--fuente-principal);
+    font-size: 2.2rem;
+}
+
+/* Aquí encontramos los estilos del bloque navegación. */
+.navegacion {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    /* Con esta linea el gap nos permite separar los elementos del bloque nav. */
+    gap: 2rem;
+}
+
+.navegacion__enlace {
+    font-family: var(--fuente-principal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+
+/* Aquí le damos el efecto a cada enlace cuando se pasa con el mouse. y además el primer enlace tiene un modificador
+activo siendo esta una de las convenciones de BEM*/
+navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--secundario);
+}
+
+/* Aquí vamos a realizar los estilos del div grid.*/
+.grid {
+    display: grid;
+    /* En este siguiente bloque y con el template nos permite colocar dos figuras en una sola columna. */
+    grid-template-columns: repeat(2, 1fr);
+    /* Para separar las imagenes tanto em la columna como en la fila. */
+    gap: 2rem;
+}
+
+/* Con el siguiente mq alineamos de a tres imagenes por una seguida de la otra horizontalmente. */
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* En este bloque vamos a darle los estilos a los productos. */
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+.producto__imagen {
+    /* Con este width podemos hacer responsive el sitio web. */
+    width: 100%;
+}
+
+/* Desde bloque vamos a darle estilos al producto nombre y al precio*/
+.producto__nombre {
+    font-size: 4rem;
+}
+
+.producto__precio {
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+
+.producto__nombre,
+.producto__precio {
+    font-family: var(--fuente-principal);
+    margin: 1rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* los gráficos con las camisas. */
+.grafico {
+    min-height: 30rem;
+    /* Para que la imagen no se repita. */
+    background-repeat: no-repeat;
+    /* Para que la imagen llene todo el espacio. */
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+
+.grafico--camisas {
+    /* Para posicionar las camisas dentro del orden que llevan las imagenes. */
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+
+.grafico--node {
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+}
+
+/* Este es el gráfico de la camisa de node. y este debe de estar dentro de un mq, con en el objeto de quitarle el
+scroll hacia los lados. */
+@media (min-width: 768px) {
+    .grafico--node {
+        grid-row: 5 / 6;
+        grid-column: 2/ 4;
+    }
+}
+
+/* Desde aquí encontramos los estilos para la página nosotros. Y vamos a utilizar un mq. */
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+        grid-template-columns: repeat(2, auto);
+        column-gap: 2rem;
+    }
+}
+
+.nosotros__imagen {
+    /* Con esta línea subimos la imagen encima del texto cuando se hace un responsive. */
+    grid-row: 1 / 2;
+    /* Para alinear la imagen al ciento por ciento. */
+    width: 100%;
+}
+
+/* Ahora vamos a necesitar un mq para posicionar la imagen de la columna dos hacia la tres; al lado derecho del 
+texto. */
+@media (min-width: 768px) {
+    .nosotros__imagen {
+        grid-column: 2 / 3;
+    }
+}
+
+/* Desde aquí estan los estilos de los bloques. */
+.bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque__imagen {
+    width: 100%;
+}
+
+.bloque {
+    text-align: center;
+}
+
+.bloque__titulo {
+    margin: 0;
+}

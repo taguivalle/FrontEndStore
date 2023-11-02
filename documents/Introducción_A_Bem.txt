@@ -1,0 +1,62 @@
+BEM. (Block Element Modifier)
+
+Inicialmente, es una metodología para crear código reutilizable y ordenado en los proyecto con CSS; pero, algo
+muy importante a tener en cuenta es que, se deben de seguir las convenciones de este BEM; como por ejemplo, se
+deben de nombrar las clases y los elementos. Es gracias a estas convenciones que se evita la colisión de estos 
+nombres.
+
+En muchas ocaciones sucede que agregamos una clase y esa clase ya estaba definida; entonces, BEM como tiene una
+metodología para nombrar los elementos con características especiales evita esa colisión de nombres. Ahora 
+veamos algunas reglas de la metodología de BEM, pues entiéndase que esta tiene sus propias convenciones.
+
+PRIMERO: Los bloques.
+
+Estos son un contenedor, es decir, sí una sección or sí sola es significativa y no requiere de otras secciones 
+para su apariencia (CSS) debe de ir en un bloque. por ejemplo, que tengamos: 
+
+<div class="cliente">Aquí algo+</div>
+
+Este cliente no depende de otros elementos; por sí solo podemos seleccionar este div y darle estilos. entonces
+en BEM tendríamos que seleccionar este bloque y darle estilos únicamente a ese bloque:
+
+.cliente {
+    algo agregamos
+}
+
+De otra parte, los elementos en BEM son parte de un bloque, estos dependen dle bloque y no es por sí solo 
+significativo; es decir, sí colocamos el nombre de un cliente este por sí solo no es significativo; no pertenecen 
+al bloque de cliente No? Los elementos tienen las característica de que utilizan el nombre del bloque después 
+utilizan doble guión bajo.
+
+De lo anterior, puede verse extraño; pero, básicamente el ejemplo es de la siguiente forma digamos que tenemos un 
+párrafo:
+
+<p class="cliente__nombre">Aquí algo+</p>
+
+Este, pertenece ala bloque cliente, pero estamos agregando el nombre por lo tanto, se le agrega doble guión bajo y 
+después el nombre; es un elemento, depende del bloque anterior y pertenece a él. Por lo tanto, se le agregan esos 
+dos guiones bajo en la parte inferior. Esta sintaxis sí se ve un poco rara la primera vez. En el CSS tendríamos
+algo como esto:
+
+.cliente__nombre {
+    algo agregamos
+}
+
+Finalmente, en BEM tenemos los modificadores, un bloque o un elemento tendrá alguna variante; entonces, se utiliza 
+lo que se conoce como un moficador, que viene a ser una bandera que avisa que este es un elemento y que por lo 
+tanto tendrá un diseño diferente y el ejemplo en el código sería el siguiente:
+
+<p class="cliente__nombre--ceo">Aquí algo+</p>
+
+Anteriormente, teníamos una clase llamada cliente nombre, pero aquí tenemos un moficador que dice cliente doble
+guión bajo nombre y después viene CEO de la compañía, es decir, quién es el dueño de la compañía; esto realmente
+pasa; porque algunos clientes manifiestan oye este cliente es el dueño, entonces ponle un poco más grande para que
+vean que es mí cliente.
+
+Como resumen, esos dos guiones bajos nos dicen que pertenece a cliente nombre, pero digamos que, es una variante y 
+se muestra un poco más grande; porque es una persona muy importante según ellos. Entonces, en el CSS sería algo como 
+esto:
+
+.cliente__nombre--ceo {
+    algo agregamos
+}

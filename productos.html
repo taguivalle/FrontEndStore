@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <!-- Con este link se inserta el icono en el título de la pagina "FrontEnd Store". -->
+    <link rel="shortcut icon" href="../icons/producto.ico" type="image/x-icon">
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub&family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Con esta etiqueta link se puede enlazar con el archivo style.css -->
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Esta etiqueta header viene a ser otro bloque. -->
+    <header class="header">
+        <!-- Cuando se tienen varias páginas es muy conveniente que, sí se visita cualquiera de ellas el logotipo
+        siempre debe de llevarnos a la página principal o sea al index.tml. Por lo que es muy importante utilizar
+        la etiqueta <a href="index.html".-->
+        <a href="productos.html">
+            <img class="header__logo" src="img/logo.png" alt="logotipo">
+        </a>
+    </header>
+    <!-- Esta etiqueta nav viene a ser otro bloque. -->
+    <nav class="navegacion">
+        <!-- Este primer elemento es un claro ejemplo de un modificador. -->
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">TIENDA</a>
+        <a class="navegacion__enlace" href="nosotros.html">NOSOTROS</a>
+    </nav>
+    <main class="contenedor">
+        <h1>Nuestros Productos</h1>
+    </main>
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - Todos los Derechos Reservados 2023. &copy; By Héctor Gustavo Vallejo
+            Espinosa.</p>
+    </footer>
+</body>
+
+</html>

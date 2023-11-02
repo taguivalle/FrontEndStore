@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <!-- Con este link se inserta el icono en el título de la pagina "FrontEnd Store". -->
+    <link rel="shortcut icon" href="../icons/grupo.ico" type="image/x-icon">
+    <!-- Desde aquí comienzan los CSS. -->
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub&family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Con esta etiqueta link se puede enlazar con el archivo style.css -->
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Esta etiqueta header viene a ser otro bloque. -->
+    <header class="header">
+        <!-- Cuando se tienen varias páginas es muy conveniente que, sí se visita cualquiera de ellas el logotipo
+        siempre debe de llevarnos a la página principal o sea al index.tml. Por lo que es muy importante utilizar
+        la etiqueta <a href="index.html".-->
+        <a href="nosotros.html">
+            <img class="header__logo" src="img/logo.png" alt="logotipo">
+        </a>
+    </header>
+    <!-- Esta etiqueta nav viene a ser otro bloque. -->
+    <nav class="navegacion">
+        <!-- Este primer elemento es un claro ejemplo de un modificador. -->
+        <a class="navegacion__enlace" href="index.html">TIENDA</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="nosotros.html">NOSOTROS</a>
+    </nav>
+    <main class="contenedor">
+        <h1>Nosotros</h1>
+        <div class="nosotros">
+            <div class="nosotros__contendio">
+                <p>Lorem ipsum dolor sit amet. Et harum nemo est earum culpa qui officiis quos eum ipsam ratione id
+                    molestiae molestiae in molestias dolorum sit fuga quos. Id ipsum quasi quo quas tenetur 33
+                    reiciendis omnis aut sequi quis ut facilis eaque. 33 eveniet exercitationem eum possimus voluptatem
+                    et voluptatibus optio. At dolores deleniti sed reiciendis expedita et impedit iure et dolores rerum
+                    aut natus odit qui galisum Quis 33 voluptas facere. </p>
+                <p>Ut fugit enim qui sunt facilis cum alias quisquam sit quia unde eos illum quisquam qui galisum
+                    repudiandae. Et cumque voluptates eos maiores magnam in ipsa fugiat. Qui rerum labore ut accusantium
+                    voluptas eum odio ipsam aut quia sapiente est rerum harum aut beatae dolorum. Qui quia quia sed
+                    facilis nulla ut facilis obcaecati. </p>
+            </div>
+            <img class="nosotros__imagen" src="img/nosotros.jpg" alt="imagen nosotros">
+        </div>
+    </main>
+    <section class="contenedor comprar">
+        <h2 class="comprar__titulo">¿Porqué comprar con nosotros?</h2>
+        <div class="bloques">
+            <!-- Este primer bloque de BEM. -->
+            <div class="bloque__imagen" class="bloque">
+                <img src="img/icono_1.png" alt="porque comprar">
+                <h3 class="bloque__titulo">El mejor precio</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ea modi recusandae possimus magnam
+                    neque quas distinctio fugiat quia dignissimos. Nihil doloremque repellat, quas excepturi aut
+                    assumenda distinctio quidem reiciendis?</p>
+            </div><!-- Final del primer bloque de BEM. -->
+            <!-- Este segundo bloque de BEM. -->
+            <div class="bloque__imagen" class="bloque">
+                <img src="img/icono_2.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Para Devs</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ea modi recusandae possimus magnam
+                    neque quas distinctio fugiat quia dignissimos. Nihil doloremque repellat, quas excepturi aut
+                    assumenda distinctio quidem reiciendis?</p>
+            </div><!-- Final del segundo bloque de BEM. -->
+            <!-- Este tercer bloque de BEM. -->
+            <div class="bloque__imagen" class="bloque">
+                <img src="img/icono_3.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Envío gratis</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ea modi recusandae possimus magnam
+                    neque quas distinctio fugiat quia dignissimos. Nihil doloremque repellat, quas excepturi aut
+                    assumenda distinctio quidem reiciendis?</p>
+            </div><!-- Final del tercer bloque de BEM. -->
+            <!-- Este cuarto bloque de BEM. -->
+            <div class="bloque__imagen" class="bloque">
+                <img src="img/icono_4.png" alt="porque comprar">
+                <h3 class="bloque__titulo">La mejor calidad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ea modi recusandae possimus magnam
+                    neque quas distinctio fugiat quia dignissimos. Nihil doloremque repellat, quas excepturi aut
+                    assumenda distinctio quidem reiciendis?</p>
+            </div><!-- Final del cuarto bloque. -->
+        </div><!-- Y este es el final de los bloques. -->
+    </section>
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - Todos los Derechos Reservados 2023. &copy; By Héctor Gustavo Vallejo
+            Espinosa.</p>
+    </footer>
+</body>
+
+</html>
